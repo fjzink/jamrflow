@@ -4,7 +4,7 @@ class CreateAnswers < ActiveRecord::Migration[5.1]
       t.text :content
       t.integer :question_id
       t.integer :answerer_id
-      t.boolean :best_answer
+      t.boolean :best_answer, default: false
       t.timestamps
     end
   end
