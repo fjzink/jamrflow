@@ -1,0 +1,11 @@
+.sessions_menu {
+  float: right;
+  padding-right: 20px;
+}
+li{
+  list-style: none;
+}
+
+form {
+  padding: 10px;
+}
