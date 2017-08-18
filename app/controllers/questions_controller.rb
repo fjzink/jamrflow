@@ -3,12 +3,14 @@ get '/questions' do
   erb :'index'
 end
 
-get 'questions/:id/answers' do
+get '/questions/:id/answers' do
+  p params
   @question = Question.find(params[:id])
+  p @question
   @answers = @question.answers
-  erb :'questions/answers'
+  erb :'questions/show'
 end
 
 get 'questions/:id/comments' do
-  erb :'questions/'
+  erb :'questions/comments'
 end
