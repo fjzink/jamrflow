@@ -1,13 +1,13 @@
 #show all comments associated with the given answer.
 get '/answers/:id/comments' do
-  @answer = Answer.find(params[:id])
-  @comments = Comment.all
+  @answer = Answer.find(1)
+  comments = Comment.all
   @users = User.all
   @commenter = ''
   @comments = @comments.select { |comment| comment.commentable_type == "Answer" }
   @comments = @comments.select { |comment| comment.commentable_id == params[:id] }
 
 
-  erb :'/comments/comments.erb'
+  erb :'/partials/_comments'
 
 end
