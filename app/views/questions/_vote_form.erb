@@ -1,0 +1,11 @@
+<div class="vote-container">
+  <form method="post" action="/questions/<%= question.id %>/upvote">
+    <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button"></button>
+  </form>
+
+  <h3><%= questions.votes.count %></h3>
+
+  <form method="post" action="/questions/<%= question.id %>/downvote">
+    <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button downvote-button"></button>
+  </form>
+</div>
