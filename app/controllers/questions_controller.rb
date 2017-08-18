@@ -3,6 +3,8 @@ get '/questions' do
 end
 
 get 'questions/:id/answers' do
+  @question = Question.find(params[:id])
+  @answers = @question.answers
   erb :'questions/answers'
 end
 
