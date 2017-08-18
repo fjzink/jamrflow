@@ -38,3 +38,12 @@ form {
   color: -webkit-link;
   cursor: auto;
 }
+
+button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font: inherit;
+  color: -webkit-link;
+  cursor: auto;
+}
