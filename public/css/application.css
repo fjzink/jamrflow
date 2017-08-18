@@ -10,6 +10,22 @@ form {
   padding: 10px;
 }
 
+.answer-content {
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.question {
+  padding: 5px;
+}
+
+.answers {
+  width: 90%;
+  padding: 5px;
+  margin: auto;
+}
+
 .logout {
   display: inline;
 }

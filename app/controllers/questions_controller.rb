@@ -13,9 +13,9 @@ end
 get 'questions/:id/answers' do
   @question = Question.find(params[:id])
   @answers = @question.answers
-  erb :'questions/answers'
+  erb :'questions/show'
 end
 
 get 'questions/:id/comments' do
-  erb :'questions/'
+  erb :'questions/comments'
 end
