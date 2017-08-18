@@ -4,7 +4,13 @@
     <% @questions.each do |question| %>
     <div class="question" id="<%= question.id %>">
       <h4 class="title"><a href="/questions/<%= question.id %>/answers"><%= question.title %></a></h4>
-      <p class="points"><%= "points will go here" %> points</p>
+      <p>
+        <span class="votes">votes: <%= question.points %></span>
+        <span class="answers">answers: <%= question.answers.count %></span>
+
+        <span class="username">Posted by: <%= question.questioner.username %></span>
+        <span class="timestamp">Posted: <%= question.time_since_creation %> seconds ago</span>
+      </p>
     </div>
     <% end %>
   <% end %>
