@@ -1,0 +1,27 @@
+<div class="container">
+  <p><%= @answer.content %></p>
+</div>
+<div>
+  <h4>Comments:</h4>
+  <ul>
+    <% @comments.each do |comment| %>
+      <% if @commenter.empty? %>
+        <% @users.each do |user| %>
+          <% if user.id == comment.commenter_id %>
+            <% @commenter = user.username %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <li>
+      <div>
+        <h5>By: <%= @commenter %></h5>
+      </div>
+      <div>
+        <p>
+          <%= "$#{comment.content}" %>
+        </p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
