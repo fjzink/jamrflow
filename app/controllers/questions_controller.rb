@@ -3,11 +3,24 @@ get '/questions' do
   erb :'index'
 end
 
-post '/questions/:id/vote' do
+post '/questions/:id/upvote' do
   # content_type :json
   question = Question.find(params[:id])
   question.votes.create(value: 1)
-  redirect '/questions'
+  redirect '/questions/:id/answers'
+end
+
+post '/questions/:id/downvote' do
+  # content_type :json
+  question = Question.find(params[:id])
+  question.votes.create(value: -1)
+  redirect '/questions/:id/answers'
+end
+
+post '/questions/:id/comment' do
+  # content_type :json
+  question = Question.find(params[:id])
+  redirect '/questions/:id/comments'
 end
 
 get 'questions/:id/answers' do
