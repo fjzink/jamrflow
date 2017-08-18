@@ -1,13 +1,4 @@
 <%= erb :'questions/_question', locals: {question: @question} %>
 
-<h4 class="comments">Comments</h4>
-<div class="comments">
-  <% if @comments %>
-  <% @comments.each do |comment| %>
-  <div class="comment-content" id="<%= comment.id %>">
-    <p class="post-info"><span class="points"><%= "points will go here" %> points</span> <span class="username">Posted by: <%= comment.commenter.username %></span></p>
-    <p class="content"><%= comment.content %></p>
-  </div>
-  <% end %>
-  <% end %>
-</div>
+<%= erb :'partials/_comments', locals: {comments: @comments} %>
+<a href="/questions/<%= @question.id %>/answers">Go back to the answers.</a>
