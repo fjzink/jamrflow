@@ -5,11 +5,13 @@ end
 
 post '/login' do
   user = User.authenticate(params[:username], params[:password])
+  p '************************'
+  p user
+  p params
   if user
     login(user)
     redirect '/questions'
   else
-    @errors = user.errors.full_messages
     redirect :'/login'
   end
 end
