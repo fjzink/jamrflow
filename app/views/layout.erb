@@ -20,19 +20,21 @@
   <title></title>
 </head>
 <body>
-  <div class="sessions_menu">
-    <% if !logged_in? %>
-      <ul>
-        <li><a href="/questions">home</a></li>
-        <li><a href="/login">login</a></li>
-        <li><a href="/register">register</a></li>
-      </ul>
-    <% else %>
-      <ul>
-        <%= erb :'/sessions/_logout' %>
-      </ul>
-    <% end %>
-  </div>
+  <header>
+    <a class='logo' href="/questions">JAMRflow</a>
+    <div class="sessions_menu">
+      <% if !logged_in? %>
+        <ul>
+          <li><a href="/login">login</a></li>
+          <li><a href="/register">register</a></li>
+        </ul>
+      <% else %>
+        <ul>
+          <%= erb :'/sessions/_logout' %>
+        </ul>
+      <% end %>
+    </div>
+  </header>
   <%= yield %>
 </body>
 </html>

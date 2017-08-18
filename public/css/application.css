@@ -1,7 +1,13 @@
-.sessions_menu {
-  float: right;
-  padding-right: 20px;
+body {
+  background-color: #fcf9e0;
 }
+
+.sessions_menu {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+}
+
 li{
   list-style: none;
 }
@@ -47,3 +53,18 @@ button {
   color: -webkit-link;
   cursor: auto;
 }
+
+header {
+  position: relative;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #42cbf4;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.logo {
+  margin-left: 5%;
+  font-size: 2.5em;
+}
+
