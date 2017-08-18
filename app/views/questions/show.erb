@@ -1,23 +1,17 @@
-<div class="question">
-  <% if @question %>
-    <h1 class="title"><%= @question.title %></h1>
-    <br>
-    <p class="content"><%= @question.content %></p>
-    <p><%= "points will go here" %> points</p>
-    <p><a href="/questions/<%= @question.id %>/comments">Comments</a></p>
-  <% end %>
-</div>
+<%= erb :'questions/_question', locals: {question: @question} %>
 
 <h4 class="answers">Answers</h4>
 <div class="answers">
   <% if @answers %>
-    <% @answers.each do |answer| %>
-      <div class="answer-content">
-        <p></p>
-        <p class="content"><%= answer.content %></p>
-        <p class="points"><%= "points will go here" %> points</p>
-        <p><a href="/answers/<%= answer.id %>/comments">Comments</a></p>
-      </div>
+  <% @answers.each do |answer| %>
+  <div class="answer-content" id="<%= answer.id %>">
+    <% if answer.best_answer %>
+    <h4>Best Answer</h4>
     <% end %>
+    <p class="post-info"><span class="points"><%= "points will go here" %> points</span> <span class="username">Posted by: <%= answer.answerer.username %></span></p>
+    <p class="content"><%= answer.content %></p>
+    <p><a href="/answers/<%= answer.id %>/comments">Comments</a></p>
+  </div>
+  <% end %>
   <% end %>
 </div>

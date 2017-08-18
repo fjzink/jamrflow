@@ -23,12 +23,14 @@ post '/questions/:id/comment' do
   redirect '/questions/:id/comments'
 end
 
-get 'questions/:id/answers' do
+get '/questions/:id/answers' do
   @question = Question.find(params[:id])
   @answers = @question.answers
   erb :'questions/show'
 end
 
-get 'questions/:id/comments' do
+get '/questions/:id/comments' do
+  @question = Question.find(params[:id])
+  @comments = @question.comments
   erb :'questions/comments'
 end
