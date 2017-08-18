@@ -1,0 +1,14 @@
+<form method="post" action="/register">
+  <input type="text" name="user[username]" placeholder="username">
+  <input type="email" name="user[email]" placeholder="email">
+  <input type="password" name="user[password]" placeholder="password">
+  <input type="submit" value="register">
+
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</form>
