@@ -1,0 +1,11 @@
+<h1>JAMRflow</h1>
+<div class="all-questions">
+  <% if @questions %>
+    <% @questions.each do |question| %>
+    <div class="question" id="<%= question.id %>">
+      <h4 class="title"><a href="/questions/<%= question.id %>/answers"><%= question.title %></a></h4>
+      <p class="points"><%= "points will go here" %> points</p>
+    </div>
+    <% end %>
+  <% end %>
+</div>
