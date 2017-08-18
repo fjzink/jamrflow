@@ -25,3 +25,16 @@ form {
   padding: 5px;
   margin: auto;
 }
+
+.logout {
+  display: inline;
+}
+
+.logout input {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font: inherit;
+  color: -webkit-link;
+  cursor: auto;
+}

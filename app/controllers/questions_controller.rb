@@ -3,10 +3,15 @@ get '/questions' do
   erb :'index'
 end
 
-get '/questions/:id/answers' do
-  p params
+post '/questions/:id/vote' do
+  # content_type :json
+  question = Question.find(params[:id])
+  question.votes.create(value: 1)
+  redirect '/questions'
+end
+
+get 'questions/:id/answers' do
   @question = Question.find(params[:id])
-  p @question
   @answers = @question.answers
   erb :'questions/show'
 end
