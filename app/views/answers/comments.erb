@@ -1,0 +1,4 @@
+<%= erb :'answers/_answer', locals: {answer: @answer} %>
+
+<%= erb :'partials/_comments', locals: {comments: @comments} %>
+<a href="/questions/<%= @question.id %>/answers">Go back to the answers.</a>

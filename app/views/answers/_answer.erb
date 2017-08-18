@@ -1,0 +1,11 @@
+<div class="answer">
+  <% if answer %>
+  <p class="post-info"><span class="points"><%= answer.points %> points</span> <span class="username">Posted by: <%= answer.answerer.username %></span></p>
+  <br>
+  <%= erb :'/partials/_vote_form', locals: {answer: answer} %>
+  <p class="content"><%= answer.content %></p>
+  <% if @answers %>
+  <p><a href="/questions/<%= question.id %>/comments">Comments</a></p>
+  <% end %>
+  <% end %>
+</div>

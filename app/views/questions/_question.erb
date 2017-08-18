@@ -5,7 +5,7 @@
   <br>
   <%= erb :'/partials/_vote_form', locals: {question: question}%>
   <p class="content"><%= question.content %></p>
-  <% if @answers %>
+  <% if answers %>
   <p><a href="/questions/<%= question.id %>/comments">Comments</a></p>
   <% end %>
   <% end %>
