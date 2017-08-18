@@ -1,6 +1,7 @@
 <div class="question">
   <% if @question %>
     <h1 class="title"><%= @question.title %></h1>
+    <%= erb :'/partials/_vote_form', layout: false, locals: {question: @question} %>
     <br>
     <p class="content"><%= @question.content %></p>
     <p><%= "points will go here" %> points</p>

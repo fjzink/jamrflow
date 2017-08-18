@@ -9,7 +9,7 @@
         <span class="answers">answers: <%= question.answers.count %></span>
 
         <span class="username">Posted by: <%= question.questioner.username %></span>
-        <span class="timestamp">Posted: <%= question.time_since_creation %> seconds ago</span>
+        <span class="timestamp"><%= question.time_since_creation %> seconds ago</span>
       </p>
     </div>
     <% end %>
