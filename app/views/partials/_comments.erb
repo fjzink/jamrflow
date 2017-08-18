@@ -6,6 +6,8 @@
     <p class="post-info"><span class="username">Posted by: <%= comment.commenter.username %></span></p>
     <p class="content"><%= comment.content %></p>
   </div>
+  </br>
   <% end %>
   <% end %>
+    <%= erb :'/partials/_comment_form', locals: {question: question} %>
 </div>

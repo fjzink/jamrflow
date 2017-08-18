@@ -22,6 +22,7 @@ end
 post '/questions/:id/comments' do
   # content_type :json
   question = Question.find(params[:id])
+  Comment.create(content: params[:comment], commentable_type: Question, commentable_id: params[:id], commenter_id: session[:user_id])
   redirect "/questions/#{question.id}/comments"
 end
 
