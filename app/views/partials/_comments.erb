@@ -3,7 +3,7 @@
   <% if comments %>
   <% comments.each do |comment| %>
   <div class="comment-content" id="<%= comment.id %>">
-    <p class="post-info"><span class="points"><%= "points will go here" %> points</span> <span class="username">Posted by: <%= comment.commenter.username %></span></p>
+    <p class="post-info"><span class="username">Posted by: <%= comment.commenter.username %></span></p>
     <p class="content"><%= comment.content %></p>
   </div>
   <% end %>

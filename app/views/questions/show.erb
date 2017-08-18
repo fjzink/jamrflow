@@ -8,7 +8,7 @@
     <% if answer.best_answer %>
     <h4>Best Answer</h4>
     <% end %>
-    <p class="post-info"><span class="points"><%= "points will go here" %> points</span> <span class="username">Posted by: <%= answer.answerer.username %></span></p>
+    <p class="post-info"><span class="points"><%= answer.points %> points</span> <span class="username">Posted by: <%= answer.answerer.username %></span></p>
     <p class="content"><%= answer.content %></p>
     <p><a href="/answers/<%= answer.id %>/comments">Comments</a></p>
   </div>
