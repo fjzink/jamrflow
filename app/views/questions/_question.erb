@@ -1,0 +1,11 @@
+<div class="question">
+  <% if question %>
+  <h1 class="title"><%= question.title %></h1>
+  <p class="post-info"><span class="points"><%= "points will go here" %> points</span> <span class="username">Posted by: <%= question.questioner.username %></span></p>
+  <br>
+  <p class="content"><%= question.content %></p>
+  <% if @answers %>
+  <p><a href="/questions/<%= question.id %>/comments">Comments</a></p>
+  <% end %>
+  <% end %>
+</div>

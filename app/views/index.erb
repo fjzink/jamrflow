@@ -5,7 +5,7 @@
     <div class="question" id="<%= question.id %>">
       <h4 class="title"><a href="/questions/<%= question.id %>/answers"><%= question.title %></a></h4>
       <p>
-        <span class="votes">votes: <%= question.points %></span>
+        <span class="votes">points: <%= question.points %></span>
         <span class="answers">answers: <%= question.answers.count %></span>
 
         <span class="username">Posted by: <%= question.questioner.username %></span>

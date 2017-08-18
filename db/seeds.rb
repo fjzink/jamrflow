@@ -9,7 +9,7 @@ Comment.delete_all
 20.times do
   username = Faker::Cat.name.downcase + '_' + Faker::Pokemon.name.downcase
   u = User.create(username: username , email: Faker::Internet.email(username))
-  q = Question.create(title: Faker::RickAndMorty.quote, content: Faker::Hipster.paragraph, questioner_id: u.id)
+  q = Question.create(title: Faker::RickAndMorty.quote, content: Faker::RuPaul.quote, questioner_id: u.id)
   Answer.create(content: Faker::ChuckNorris.fact, question_id: q.id, answerer_id: u.id)
   Vote.create(votable_type: Question, votable_id: q.id, voter_id: u.id, value: votes.sample)
   Vote.create(votable_type: Answer, votable_id: q.id, voter_id: u.id, value: votes.sample)
