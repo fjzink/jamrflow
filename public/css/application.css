@@ -10,3 +10,15 @@ form {
   padding: 10px;
 }
 
+.logout {
+  display: inline;
+}
+
+.logout input {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font: inherit;
+  color: -webkit-link;
+  cursor: auto;
+}
