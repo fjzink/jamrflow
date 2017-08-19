@@ -14,3 +14,7 @@
     <% end %>
   <% end %>
 </div>
+
+<% if logged_in? %>
+<%= erb :'partials/_question_form' %>
+<% end %>
