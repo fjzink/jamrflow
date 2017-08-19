@@ -39,10 +39,15 @@ form {
 .logout input {
   background: none!important;
   border: none;
-  padding: 0!important;
+  padding-left: 0;
+  padding-right: 5px;
   font: inherit;
-  color: -webkit-link;
+  color: #007bff;
   cursor: auto;
+}
+
+form {
+  padding: 0px;
 }
 
 button {
@@ -68,3 +73,6 @@ header {
   font-size: 2.5em;
 }
 
+.login {
+  padding: 30px;
+}
