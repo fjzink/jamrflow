@@ -1,23 +1,11 @@
 <div>
-  <% if question %>
-    <form method="post" action="/questions/<%= question.id %>" class="vote-container">
-      <button type="submit" name="value" value="1" class="fa fa-sort-desc vote-button up-vote">⬆️</button>
-    </form>
+  <form method="post" action="<%= resource.create_route_string %>" class="vote-container">
+    <button type="submit" name="value" value="1" class="fa fa-sort-desc vote-button up-vote">⬆️</button>
+  </form>
 
-    <h3><%= question.points %></h3>
+  <h3><%= resource.points %></h3>
 
-    <form method="post" action="/questions/<%= question.id %>" class="vote-container">
-      <button type="submit" name="value" value="-1" class="fa fa-sort-desc vote-button down-vote">⬇️</button>
-    </form>
-  <% elsif answer %>
-    <form method="post" action="/answers/<%= answer.id %>" class="vote-container">
-      <button type="submit" name="value" value="1" class="fa fa-sort-desc vote-button up-vote">⬆️</button>
-    </form>
-
-    <h3><%= answer.points %></h3>
-
-    <form method="post" action="/answers/<%= answer.id %>" class="vote-container">
-      <button type="submit" name="value" value="-1" class="fa fa-sort-desc vote-button down-vote">⬇️</button>
-    </form>
-  <% end %>
+  <form method="post" action="<%= resource.create_route_string %>" class="vote-container">
+    <button type="submit" name="value" value="-1" class="fa fa-sort-desc vote-button down-vote">⬇️</button>
+  </form>
 </div>

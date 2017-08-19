@@ -14,4 +14,8 @@ class Answer < ActiveRecord::Base
     ((Time.now - created_at) / 3600).round
   end
 
+    def create_route_string
+    "/answers/#{self.id}"
+  end
+
 end

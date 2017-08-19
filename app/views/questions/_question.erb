@@ -1,12 +1,12 @@
 <div class="question">
   <% if question %>
-  <h1 class="title"><%= question.title %></h1>
-  <p class="post-info"><span class="points"><%= question.points %> points</span> <span class="username">Posted by: <%= question.questioner.username %></span></p>
-  <br>
-  <%= erb :'/partials/_vote_form', layout: false, locals: {question: question}%>
-  <p class="content"><%= question.content %></p>
-  <% if answers %>
-  <p><a href="/questions/<%= question.id %>/comments">Comments</a></p>
-  <% end %>
+    <h1 class="title"><%= question.title %></h1>
+    <p class="post-info"><span class="points"><%= question.points %> points</span> <span class="username">Posted by: <%= question.questioner.username %></span></p>
+    <br>
+    <%= erb :'/partials/_vote_form', layout: false, locals: {resource: question}%>
+    <p class="content"><%= question.content %></p>
+    <% if answers %>
+    <p><a href="/questions/<%= question.id %>/comments">Comments</a></p>
+    <% end %>
   <% end %>
 </div>
