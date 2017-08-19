@@ -3,7 +3,7 @@
   <h1 class="title"><%= question.title %></h1>
   <p class="post-info"><span class="points"><%= question.points %> points</span> <span class="username">Posted by: <%= question.questioner.username %></span></p>
   <br>
-  <%= erb :'/partials/_vote_form', locals: {question: question}%>
+  <%= erb :'/partials/_vote_form', layout: false, locals: {question: question}%>
   <p class="content"><%= question.content %></p>
   <% if answers %>
   <p><a href="/questions/<%= question.id %>/comments">Comments</a></p>
