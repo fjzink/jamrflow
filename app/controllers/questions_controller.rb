@@ -1,3 +1,8 @@
+post '/questions' do
+  Question.create(title: params[:title], content: params[:content], questioner_id: session[:user_id])
+  redirect '/questions'
+end
+
 get '/questions' do
   @questions = Question.all
   erb :'index'
