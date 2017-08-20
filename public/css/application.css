@@ -74,9 +74,46 @@ header {
 }
 
 .login {
-  padding: 30px;
+  padding-left: 50px;
+  padding-top: 10px;
 }
 
 .register {
-  padding: 30px;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.register input {
+  display: block;
+  margin: 5px;
+}
+
+.all-questions {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.question {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.answer {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.new-question {
+  padding-left: 100px;
+  padding-bottom: 20px;
+}
+
+.new-question input {
+  display: block;
+  margin: 5px;
+}
+
+.back {
+  padding-left: 90px;
+  padding-bottom: 10px;
 }

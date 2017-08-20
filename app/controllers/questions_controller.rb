@@ -26,9 +26,13 @@ end
 
 post '/questions/:id/comments' do
   # content_type :json
-  question = Question.find(params[:id])
-  Comment.create(content: params[:comment], commentable_type: Question, commentable_id: params[:id], commenter_id: session[:user_id])
-  redirect "/questions/#{question.id}/comments"
+  if logged_in?
+    question = Question.find(params[:id])
+    Comment.create(content: params[:comment], commentable_type: Question, commentable_id: params[:id], commenter_id: session[:user_id])
+    redirect "/questions/#{question.id}/comments"
+  else
+    redirect '/login'
+  end
 end
 
 get '/questions/:id/answers' do
