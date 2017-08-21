@@ -35,6 +35,16 @@ post '/questions/:id/comments' do
   end
 end
 
+post '/questions/:id/answers' do
+  if logged_in?
+    @question = Question.find(params[:id])
+    Answer.create(content: params[:conetent], question_id: params[:id], answerer_id: session[:user_id])
+    redirect "/questions/#{@question.id}/answers"
+  else
+    redirect '/login'
+  end
+end
+
 get '/questions/:id/answers' do
   @question = Question.find(params[:id])
   @answers = @question.answers

@@ -6,7 +6,7 @@ get '/answers/:id/comments' do
   erb :'answers/comments'
 end
 
-post '/answers/:id/' do
+post '/answers/:id' do
   answer = Answer.find(params[:id])
   question = Question.find(answer.question.id)
 
