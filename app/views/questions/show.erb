@@ -10,9 +10,17 @@
     <% end %>
     <p class="post-info"><span class="points"><%= answer.points %> points</span> <span class="username">Posted by: <%= answer.answerer.username %></span></p>
     <p class="content"><%= answer.content %></p>
+    <% if session[:user_id] == @question.questioner_id %>
+      <form action="/questions/<%= question.id %>/best_answer" method="post">
+        <input type="submit" value="best_answer">        
+      </form>
+    <% end %>
     <p><a href="/answers/<%= answer.id %>/comments">Comments</a></p>
   </div>
   <br>
   <% end %>
+  <% end %>
+  <% if session[:user_id] != @question.questioner_id %>
+    <%= erb :'/answers/_answer_form', locals: {question: @question} %>
   <% end %>
 </div>
